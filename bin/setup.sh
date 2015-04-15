@@ -4,7 +4,7 @@
 ################################################################################
 
 # Packages which are pre-installed
-INSTALLED_PACKAGES="ca_root_nss virtualbox-ose-additions bash sudo ezjail"
+INSTALLED_PACKAGES="ca_root_nss virtualbox-ose-additions bash sudo ezjail git"
 RAW_REPOSITORY="raw.githubusercontent.com/ivan-iver/freebsd-vagrant-erlang"
 VAGRANT_PRIVATE_KEY="https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub"
 
@@ -37,8 +37,6 @@ pkg update
 for p in $INSTALLED_PACKAGES; do
    pkg install -y "$p"
 done
-
-pkg_add -r git
 
 ################################################################################
 # Erlang Installation
@@ -78,17 +76,21 @@ pkg install -y lang/erlang
 # vagrant
 # EOP
 
+# -------------------------
+# User vagrant configuration
+# -------------------------
 # Enable sudo for this user
 # echo "%vagrant ALL=(ALL) NOPASSWD: ALL" >> /usr/local/etc/sudoers
 
 # Authorize vagrant to login without a key
-mkdir /home/vagrant/.ssh
-touch /home/vagrant/.ssh/authorized_keys
-chown vagrant:vagrant /home/vagrant/.ssh
+# mkdir /home/vagrant/.ssh
+# touch /home/vagrant/.ssh/authorized_keys
+# chown vagrant:vagrant /home/vagrant/.ssh
 
 # Get the public key and save it in the `authorized_keys`
-fetch -o /home/vagrant/.ssh/authorized_keys $VAGRANT_PRIVATE_KEY
-chown vagrant:vagrant /home/vagrant/.ssh/authorized_keys
+# fetch -o /home/vagrant/.ssh/authorized_keys $VAGRANT_PRIVATE_KEY
+# chown vagrant:vagrant /home/vagrant/.ssh/authorized_keys
+# -------------------------
 
 [ ! -f /etc/make.conf ] || rm /etc/make.conf
 fetch -o /etc/make.conf $MAKE_CONF

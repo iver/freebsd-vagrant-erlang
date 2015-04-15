@@ -51,7 +51,12 @@ to do is:
 If you want your jails started at boot, make sure to add `ezjail_enable="YES"`
 to `/etc/rc.conf`.
 
+## Software Details
 
+* **FreeBSD version**: FreeBSD packer-freebsd-10.1-amd64 10.1-RELEASE FreeBSD 10.1-RELEASE #0 r274401: Tue Nov 11 21:02:49 UTC 2014     root@releng1.nyi.freebsd.org:/usr/obj/usr/src/sys/GENERIC  amd64
+
+* **Erlang version**: Erlang/OTP 17 [erts-6.4] [source] [64-bit] [smp:2:2] [async-threads:10] [kernel-poll:false]
+Eshell V6.4
 
 ## Credits
 
