@@ -127,7 +127,7 @@ cat /dev/null > /root/.history
 #    read -p "Would you like me to zero out all data to reduce box size? [y/N] " yn
 #    case $yn in
 #        [Yy]* ) dd if=/dev/zero of=/tmp/ZEROES bs=1M; break;;
-dd if=/dev/zero of=/tmp/ZEROES bs=1M;
+# dd if=/dev/zero of=/tmp/ZEROES bs=1M;
 #        [Nn]* ) break;;
 #        * ) echo "Please answer yes or no.";;
 #    esac
