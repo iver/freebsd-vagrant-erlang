@@ -44,7 +44,7 @@ pkg_add -r git
 # Erlang Installation
 ################################################################################
 # Default
-pkg install lang/erlang
+pkg install -y lang/erlang
 
 # -------------------------
 # Build from source (using kerl: https://github.com/yrashk/kerl)
