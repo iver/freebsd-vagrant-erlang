@@ -27,7 +27,7 @@ After that you can run your vagrant machine:
 
 ```
 $ cd erlang-vm/
-$ vagrant up
+$ vagrant up --provision
 $ vagrant ssh
 ```
 
