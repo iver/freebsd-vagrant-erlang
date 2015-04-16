@@ -29,6 +29,8 @@ MOTD="https://$RAW_REPOSITORY/master/etc/motd"
 # Setup pkgng
 # cp /usr/local/etc/pkg.conf.sample /usr/local/etc/pkg.conf
 fetch -o /usr/local/etc/pkg.conf $PKG_CONF
+fetch -o /etc/resolv.conf.sample $RESOLV_CONF
+
 pkg update
 pkg upgrade -y
 pkg update
@@ -99,7 +101,7 @@ fetch -o /etc/make.conf $MAKE_CONF
 fetch -o /etc/rc.conf $RC_CONF
 
 [ ! -f /etc/resolv.conf ] || rm /etc/resolv.conf
-fetch -o /etc/resolv.conf $RESOLV_CONF
+cp /etc/resolv.conf.sample /etc/resolv.conf
 
 [ ! -f /boot/loader.conf ] || rm /boot/loader.conf
 fetch -o /boot/loader.conf $LOADER_CONF
