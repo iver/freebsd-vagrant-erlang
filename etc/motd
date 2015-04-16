@@ -20,10 +20,18 @@
                               __/ |
                              |___/
 
+-----------------------------------------------------------------
+FreeBSD packer-freebsd-10.1-amd64 10.1-RELEASE
+FreeBSD 10.1-RELEASE #0 r274401: Tue Nov 11 21:02:49 UTC 2014
+root@releng1.nyi.freebsd.org:/usr/obj/usr/src/sys/GENERIC  amd64
+-----------------------------------------------------------------
 
 Welcome to erlang vagrant machine
 
-
-Email: ivan@iver.mx
+-----------------------------------------------------------------
+Project: FreeBSD with erlang/elixir for Vagrant
+github:  https://github.com/ivan-iver/freebsd-vagrant-erlang
+Author:  Iván Jaimes
+Email:   ivan@iver.mx
 Twitter: @iver14
 

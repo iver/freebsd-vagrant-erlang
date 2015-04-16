@@ -45,7 +45,7 @@ done
 ################################################################################
 # Default
 pkg install -y lang/erlang
-
+pkg install -y elixir
 # -------------------------
 # Build from source (using kerl: https://github.com/yrashk/kerl)
 # -------------------------
