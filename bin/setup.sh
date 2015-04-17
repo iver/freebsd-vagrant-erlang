@@ -92,6 +92,8 @@ chown vagrant:vagrant /home/vagrant/.ssh
 # Get the public key and save it in the `authorized_keys`
 fetch -o /home/vagrant/.ssh/authorized_keys $VAGRANT_PRIVATE_KEY
 chown vagrant:vagrant /home/vagrant/.ssh/authorized_keys
+chmod 750 /home/vagrant
+chmod -R 700 /home/vagrant/.ssh
 # -------------------------
 
 [ ! -f /etc/make.conf ] || rm /etc/make.conf
@@ -103,8 +105,8 @@ fetch -o /etc/rc.conf $RC_CONF
 [ ! -f /etc/resolv.conf ] || rm /etc/resolv.conf
 cp /etc/resolv.conf.sample /etc/resolv.conf
 
-[ ! -f /boot/loader.conf ] || rm /boot/loader.conf
-fetch -o /boot/loader.conf $LOADER_CONF
+# [ ! -f /boot/loader.conf ] || rm /boot/loader.conf
+# fetch -o /boot/loader.conf $LOADER_CONF
 
 [ ! -f /etc/motd ] || rm /etc/motd
 fetch -o /etc/motd $MOTD

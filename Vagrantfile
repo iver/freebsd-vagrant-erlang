@@ -1,6 +1,7 @@
 # -*- mode: ruby; -*-
 Vagrant.configure("2") do |config|
   config.ssh.shell = "sh"
+#  config.ssh.insert_key = false
   config.vm.guest = :freebsd
   config.vm.box_url = "http://www.iver.mx/vagrant/freebsd-10.1_chef.box"
   config.vm.box = "freebsd-10.1-amd64"
