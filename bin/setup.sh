@@ -82,16 +82,16 @@ pkg install -y elixir
 # User vagrant configuration
 # -------------------------
 # Enable sudo for this user
-# echo "%vagrant ALL=(ALL) NOPASSWD: ALL" >> /usr/local/etc/sudoers
+echo "%vagrant ALL=(ALL) NOPASSWD: ALL" >> /usr/local/etc/sudoers
 
 # Authorize vagrant to login without a key
-# mkdir /home/vagrant/.ssh
-# touch /home/vagrant/.ssh/authorized_keys
-# chown vagrant:vagrant /home/vagrant/.ssh
+mkdir /home/vagrant/.ssh
+touch /home/vagrant/.ssh/authorized_keys
+chown vagrant:vagrant /home/vagrant/.ssh
 
 # Get the public key and save it in the `authorized_keys`
-# fetch -o /home/vagrant/.ssh/authorized_keys $VAGRANT_PRIVATE_KEY
-# chown vagrant:vagrant /home/vagrant/.ssh/authorized_keys
+fetch -o /home/vagrant/.ssh/authorized_keys $VAGRANT_PRIVATE_KEY
+chown vagrant:vagrant /home/vagrant/.ssh/authorized_keys
 # -------------------------
 
 [ ! -f /etc/make.conf ] || rm /etc/make.conf
